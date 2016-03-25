@@ -1,0 +1,236 @@
+#row {
+    background-color: white;
+    width: 90%;
+    max-width: 940px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: x-small;
+}
+
+#logo {
+    float:left;
+    background: url(logoWPPT.png) no-repeat;
+    background-size:contain;
+    display: inline-block;
+    width: 72px;
+    height: 85px;
+}
+
+#tytul_strony {
+    float:left;
+    font-size: 5em;
+    font-weight:bold;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    vertical-align: bottom;
+}
+
+#info_o_stronie {
+    clear:both;
+    margin-bottom: 20px;
+    font-family: Arial;
+    font-size: 1.7em;
+}
+
+#menu_left {
+    clear:both;
+    width:calc(1/3 * 97%);
+    margin-bottom: 10px;
+}
+
+#menu {
+    float:left;
+    width:calc(1/3 * 97%);
+    font-size: medium;
+    font-family: Arial;
+    margin-bottom: 10px;
+}
+
+#content {
+    float:left;
+    margin-left: 5px;
+    width:calc(2/3 * 97%);
+    border-left: solid 2px #f1f1f1;
+    margin-bottom:20px;
+}
+
+#napis_najwiekszy_wsp_dzielnik {
+    float:left;
+    margin-left: 8px;
+    margin-bottom:10px;
+    font-size: x-large;
+    font-weight:bold;
+}
+
+#opis_algorytmu {
+    float:left;
+    margin-left: 16px;
+    font-family: Arial;
+    font-size: 1.7em;
+}
+
+#pseudokod_alg {
+    clear:both;
+    font-family:'Times New Roman';
+    font-size: 1.2em;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+#lista_krokow {
+    clear:both;
+    margin-left:18px;
+}
+
+#algorytm {
+    clear:both;
+    background-color: #f1f1f1;
+    font-size: medium;
+    font-family:'Times New Roman';
+}
+
+#margin_pom {
+    clear:both;
+    float:left;
+    margin-left: 1px;
+    margin-bottom:20px;
+}
+
+#footer {
+    clear:both;
+    font-size: small;
+    font-family: Arial;
+    font-weight:normal;
+}
+
+#zwin_menu {
+    color: red;
+    margin: 0;
+    background-color: #f1f1f1;
+    padding: 8px 0 8px 8px;
+    text-decoration: none;
+    display: flex;
+    width:50px;
+    font-family: Arial;
+    font-size: medium;
+}
+
+#ukryjDlaDesktop {
+  display: none;
+  margin-bottom: 10px;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+li a {
+    color: #000;
+    padding: 8px 0 8px 8px;
+    text-decoration: none;
+    display: flex;
+}
+
+li a.active {
+    background-color: #DE4A2A;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: black;
+    color: white;
+}
+
+cos a {
+    display: none;
+}
+
+cos a:hover {
+display: none;
+}
+
+cos a:visited {
+    display: none;
+}
+
+
+@media screen and (max-width: 690px) {
+#row {
+    background-color: white;
+    width: 100%;
+    margin-top: 0;
+}
+
+
+
+#content {
+    margin-top:10px;
+}
+
+#menu {
+  float:auto;
+  width:100%;
+  font-size: medium;
+  font-family: Arial;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#zwin_menu {
+  float: auto;
+  width:100%;
+  color: white;
+  background-color: #DE4A2A;
+  /*padding: 12px 0 12px 12px;*/
+  /*display: flex;*/
+  font-family: Arial;
+  font-size: medium;
+  text-align: right;
+  border: 10px #DE4A2A;
+}
+
+cos a {
+    text-decoration: none;
+    display: flex;
+    color: white;
+}
+
+cos a:visited {
+    color: white;
+}
+
+cos a:hover {
+    color: white;
+}
+
+#content {
+  width:100%;
+  border-left:0;
+  margin-left:0;
+  float:auto;
+}
+
+#logo {
+  display: none;
+}
+  
+#tytul_strony {
+  font-size: 5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 0;
+  font-family: Arial;
+  color: #DE4A2A;
+}
+
+#ukryjDlaDesktop {
+  display: block;
+  width:99%;
+  padding: 8px 0 8px 0;
+}
+}
