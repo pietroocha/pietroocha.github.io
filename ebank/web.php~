@@ -1,0 +1,63 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>eBank Polska S.A.</title>
+<!--
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" lang="en" content="ADD SITE DESCRIPTION">
+		<meta name="author" content="ADD AUTHOR INFORMATION">
+		<meta name="robots" content="index, follow">-->
+
+		<!-- icons -->
+		<link rel="shortcut icon" href="favicon.ico">
+
+		<!-- Override CSS file - add your own CSS rules -->
+		<link rel="stylesheet" href="css/style2.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1 class="header-heading">eBank</h1>
+			</div>
+			<div class="nav-bar">
+				<ul class="nav">
+					<li><a href="web.php">Home</a></li>
+					<li><a href="przelew.php">Przelew</a></li>
+					<li><a href="#">Historia</a></li>
+					<li><a href="#">Pomoc</a></li>
+					<li><a href="logowanie.php">Wyloguj</a></li>
+				</ul>
+			</div>
+			<div class="content">
+				<div class="main">
+					<!-- 6 poziomow wielkosci h1, h2,..., h6 -->
+					<?php 
+					session_start();
+					if(isset($_SESSION['prawid_uzyt'])) {
+					$imie = $_SESSION['prawid_uzyt']['imie'];
+					$nazwisko = $_SESSION['prawid_uzyt']['nazwisko'];
+					echo '<p><h3>Jesteś zalogowany jako:  '.$imie." ".$nazwisko.'</h3></p>';
+					}
+					 ?>
+					<hr>
+					<?php
+					echo '<h5> Twój numer konta: '.$_SESSION['prawid_uzyt']['numerKonta'].'</h5><br />';
+					echo '<h5> Bieżący stan Twojego konta: '.$_SESSION['prawid_uzyt']['stanKonta']." zł".'</h5><br />';
+
+					?>
+
+<!--
+					<h3>Buttons</h3>
+					<p>You can apply the <code>btn</code> class to any element that requires a button style.</p>
+					<p><a href="#" class="btn">Submit</a></p>
+					<hr> -->
+
+				</div>
+			</div>
+			<div class="footer">
+				&copy; eBank Polska S.A. Wszelkie prawa zastrzeżone.
+			</div>
+		</div>
+	</body>
+</html>
