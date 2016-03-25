@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html lang="pl"> 
+	<head>  
+		<meta charset="utf-8">
+		<title>Podstawowe algorytmy</title>		
+		<link rel="stylesheet" href="style.css">
+                <meta name="viewport" content= "width=device-width, initial-scale=1.0"/>
+	</head>
+	<body>
+		<div id="row">
+			<div id="logo"></div>
+			<div id="tytul_strony">Podstawowe algorytmy</div>
+			<div id="info_o_stronie">Na stronach tych omówione są najciekawsze algorytmy omawiane na wykładzie ze Wstępu do Informatyki na pierwszym roku studiów informatycznych na Wydziale PPT PWr.</div>
+			<div id="ukryjDlaDesktop"><div id="showMenu"><div id="zwin_menu"><b><cos><a href="">&#9776; Menu</a></cos></b></div></div></div>
+                        <div id="leftMenu">
+			<div id="menu">
+				<ul>
+					<li><a href="#algorytmeuklidesa">Algorytm Euklidesa</a></li>
+					<li><a class="active" href="./index.html">Rozszerzony Algorytm Euklidesa</a></li>
+					<li><a href="#testpierwszosci">Test pierwszości</a></li>
+					<li><a href="#sitoerastotenesa">Sito Erastotenesa</a></li>
+					<li><a href="#sortowanieprzezwstawianie">Sortowanie przez wstawianie</a></li>
+					<li><a href="#sortowanieprzezscalanie">Sortowanie przez scalanie</a></li>
+					<li><a href="#testpierwszosci">Wyszukiwanie binarne</a></li>
+					<li><a href="#sitoerastotenesa">Problem wież z Hanoi</a></li>
+					<li><a href="#sortowanieprzezwstawianie">Problem hetmanów</a></li>
+					<li><a href="#sortowanieprzezscalanie">Problem skoczka szachowego</a></li>
+				</ul>
+			</div>
+			</div>
+                        
+			<div id="content">
+				<div id="napis_najwiekszy_wsp_dzielnik">Największy wspólny dzielnik</div>
+				<div id="opis_algorytmu">
+					Największym wspólnym dzielnikiem dwóch <b>liczb naturalnych</b> a, b nazywamy największą liczbę naturalną k taką, że (k|a) oraz (k|b). Oznaczamy ją NWD(a,b). Oto najważniejsze własności tej funkcji:<br /><br />
+					<div id="lista_krokow">1. NWD(a,a) = a <br />2. NWD(a,b) = NWD(b,a)<br />3. Jeśli a > b to NWD(a,b) = NWD(a-b,b)<br />4. Jeśli a = k b + r to NWD(a,b) = NWD(b,r)<br /><br /></div>
+					<div id="margin_pom">Algorytm wyznaczania największego wspólnego dzielnika dwóch liczb naturalnych party na tych własnościach został opisany przez Euklidesa w dziale Elementy, w księgach siódmej oraz 
+						dziesiątej, które powstało około 300 lat p.n.e.<br /></div>
+					<div id="pseudokod_alg"><b>Pseudo-kod funkcji</b></div>
+					<div id="algorytm">
+						a0 = a; <br />b0 = b; <br /> p = 1; q = 0; <br /> r = 0; s = 1;<br /> while (b != 0) <br />&nbsp;&nbsp;c = a mod b; <br /> &nbsp;&nbsp;quot = floor( a/b )<br />&nbsp;&nbsp;a = b; 
+						<br /> &nbsp;&nbsp;b = c;<br />&nbsp;&nbsp;r_tmp = r; s_tmp = s; <br /> &nbsp;&nbsp;r = p - quot * r; <br />&nbsp;&nbsp;s = q - quot * s; <br /> &nbsp;&nbsp;p = r_tmp; q = s_tmp;<br />
+					</div>
+				</div>
+			</div>
+			<div id="footer">Copyright &copy; 2016 WPPT PWr </div>
+		</div>
+                <script>
+                        function toggleMenu(){
+                                var el = document.getElementById("leftMenu");
+                                if (el.style.display != 'block'){
+                                        el.style.display = 'block';
+                                } else {
+                                        el.style.display = 'none';
+                                }
+                        }
+                        window.onload = function(){
+                               //document.getElementById("showMenu").onclick = toggleMenu;
+                                document.getElementById("showMenu").addEventListener("click", toggleMenu);
+                        }
+                        
+                        window.onresize = function(){
+                                var w = window.innerWidth;
+                                        if(w > 690) {
+                                                document.getElementById("leftMenu").style.display = "";
+                                        }
+                        }
+                </script>
+	</body>
+</html>
